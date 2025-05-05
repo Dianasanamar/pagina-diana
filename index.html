@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diana: Educación y Bienestar</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4fdfb;
+      color: #333;
+    }
+    header {
+      background-color: #2ebaae;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 5px solid #1f8e84;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #2ebaae;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #2ebaae;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .lang-switch {
+      text-align: center;
+      margin: 1rem;
+    }
+    .quote {
+      font-style: italic;
+      color: #555;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diana: Educación y Bienestar</h1>
+    <p>Docente, investigadora y promotora de la salud mental</p>
+    <img src="https://via.placeholder.com/120" alt="Foto de Diana">
+  </header>
+
+  <div class="lang-switch">
+    <button onclick="translateToEnglish()">🔄 Ver en inglés</button>
+  </div>
+
+  <section id="contenido">
+    <h2>Sobre mí</h2>
+    <div class="card">
+      <p>Soy Diana, Magíster en salud pública y docente universitaria. Con más de 10 años de experiencia en formación de estudiantes de enfermería, promoción de salud mental, evaluación de políticas públicas y divulgación científica.</p>
+    </div>
+
+    <h2>Estilos de vida saludable</h2>
+    <div class="card">
+      <ul>
+        <li>🧘‍♀️ Cuidar la salud mental con pausas activas y autocuidado</li>
+        <li>🥗 Comer de forma balanceada y consciente</li>
+        <li>🚶‍♀️ Mantenerse en movimiento, mínimo 30 minutos al día</li>
+        <li>🛌 Dormir entre 7 y 8 horas diarias</li>
+        <li>🧠 Practicar la gratitud y el pensamiento positivo</li>
+      </ul>
+    </div>
+
+    <h2>Frase motivadora</h2>
+    <div class="card">
+      <p class="quote" id="frase">"Cuida tu mente, es el jardín donde florecen tus días."</p>
+    </div>
+
+    <h2>Contacto</h2>
+    <div class="card">
+      <p>Correo: <strong>dsandoval44@uan.edu.co</strong></p>
+      <p>Esta página fue desarrollada para el curso de Inteligencia Artificial - 2025</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Diana - Educación y Bienestar
+  </footer>
+
+  <!-- Botón WhatsApp -->
+  <a class="whatsapp-button" href="https://wa.me/573001112233" target="_blank" title="Chatea conmigo en WhatsApp">💬</a>
+
+  <script>
+    const frases = [
+      "Cuida tu mente, es el jardín donde florecen tus días.",
+      "Pequeños hábitos crean grandes cambios.",
+      "Tu salud mental es tan importante como tu salud física.",
+      "Cada día es una nueva oportunidad para cuidarte.",
+      "No puedes servir desde una taza vacía. Llénate primero."
+    ];
+    const frase = document.getElementById("frase");
+    frase.textContent = frases[Math.floor(Math.random() * frases.length)];
+
+    function translateToEnglish() {
+      document.getElementById("contenido").innerHTML = \`
+        <h2>About Me</h2>
+        <div class="card">
+          <p>I'm Diana, Public Health Magister and university professor with over 10 years of experience in nursing education, mental health promotion, policy evaluation, and scientific communication.</p>
+        </div>
+
+        <h2>Healthy Lifestyles</h2>
+        <div class="card">
+          <ul>
+            <li>🧘‍♀️ Care for your mental health with breaks and self-care</li>
+            <li>🥗 Eat balanced and mindfully</li>
+            <li>🚶‍♀️ Stay active for at least 30 minutes daily</li>
+            <li>🛌 Sleep 7 to 8 hours each night</li>
+            <li>🧠 Practice gratitude and positive thinking</li>
+          </ul>
+        </div>
+
+        <h2>Motivational Quote</h2>
+        <div class="card">
+          <p class="quote">\${frases[Math.floor(Math.random() * frases.length)]}</p>
+        </div>
+
+        <h2>Contact</h2>
+        <div class="card">
+          <p>Email: <strong>dsandoval44@uan.edu.co</strong></p>
+          <p>This page was created for the Artificial Intelligence course - 2025</p>
+        </div>
+      \`;
+    }
+  </script>
+</body>
+</html>
